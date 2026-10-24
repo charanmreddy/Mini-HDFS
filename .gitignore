@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+namenode_data/
+test_files/

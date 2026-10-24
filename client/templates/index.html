@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini HDFS</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Mini HDFS</h1>
+  <div id="summary" class="summary">connecting…</div>
+</header>
+<main>
+  <section>
+    <h2>Datanodes</h2>
+    <div id="nodes" class="nodes"></div>
+  </section>
+
+  <section>
+    <h2>Upload a file</h2>
+    <div class="upload">
+      <input type="file" id="file">
+      <button id="uploadBtn">Upload</button>
+      <div class="bar"><div id="barFill"></div></div>
+    </div>
+    <div id="uploadMsg" class="msg"></div>
+  </section>
+
+  <section>
+    <h2>Files</h2>
+    <table id="files">
+      <thead><tr><th>Name</th><th>Size</th><th>Chunks</th><th>Status</th><th>Replication</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div id="empty" class="muted">No files yet.</div>
+  </section>
+
+  <section id="mapSection" hidden>
+    <h2>Chunk map: <span id="mapName"></span></h2>
+    <div id="verifyMsg" class="msg"></div>
+    <table id="map"><thead></thead><tbody></tbody></table>
+    <p class="muted">● copy stored on a live node &nbsp; ● copy stored on a dead node &nbsp; ○ no copy</p>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
